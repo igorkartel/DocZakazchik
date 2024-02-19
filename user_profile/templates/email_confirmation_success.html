@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<title>Успешное подтверждение</title>
+<link rel="stylesheet" crossorigin href="{% static 'css/user_profile/css/password_reset_error.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="alert-container">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Электронная почта подтверждена</h4>
+        <p>Ваш адрес электронной почты успешно подтвержден. Спасибо за регистрацию!</p>
+    </div>
+</div>
+{% endblock %}

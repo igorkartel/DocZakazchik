@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<title>Личный кабинет</title>
+<link rel="stylesheet" crossorigin href="{% static 'css/user_profile/css/profile.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <section id="profile" class="profile">
+    <p style="color: blue;"> Привет, {{ user.username }}</p>
+    <p>Страница в разработке</p>
+  </section>
+</div>
+{% endblock %}

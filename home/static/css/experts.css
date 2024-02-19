@@ -1,0 +1,182 @@
+.experts__list{
+  width: 100%;
+}
+
+.experts__item{
+  width: 77%;
+  padding-top: 50px;
+}
+
+.experts__item .content{
+  display: flex;
+}
+
+.expert__photo{
+  height: 359px;
+  width: 304px;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+.expert__photo-img{
+  width: 304px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.expert__info-main{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-left: 25px;
+}
+
+.expert__name{
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 15px 0 15px 0;
+}
+
+.expert__specialization, .expert__practice{
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.expert_info-interests{
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+.interests-title{
+  font-size: 20px;
+}
+
+.interests-text{
+  text-align: justify;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.filter{
+  padding-top: 45px;
+}
+
+.filter__select{
+  width: 413px;
+  height: 52px;
+  font-size: 16px;
+  background: rgba(211, 211, 211, 0.514);
+  border-radius: 10px;
+}
+
+.expert__info-main.mobile{
+  display: none;
+}
+
+.expert__info-main.big{
+  display: block;
+}
+
+@media screen and (max-width: 834px){
+  .experts__item{
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .expert__photo{
+    height: 286px;
+    width: 231px;
+    margin-right: 20px;
+  }
+  .expert__photo-img{
+    width: 231px;
+    height: 100%;
+  }
+
+  .expert__name{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0 10px 0;
+  }
+
+  .expert__specialization, .expert__practice{
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .expert_info-interests{
+    padding-top: 15px;
+    padding-left: 25px;
+  }
+  
+  .interests-title{
+    font-size: 16px;
+  }
+  
+  .interests-text{
+    font-size: 14px;
+    text-align: justify;
+    padding-top: 10px;
+    line-height: 18px;
+  }
+
+}
+@media screen and (max-width: 480px){
+
+  .experts__item .content{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .experts__item{
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .expert__photo{
+    display: flex;
+    height: 286px;
+    width: 100%;
+    margin-right: 20px;
+  }
+  .expert__photo-img{
+    margin-right: 10px;
+    width: 231px;
+    height: 100%;
+  }
+
+  .expert__name{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0 10px 0;
+  }
+
+  .expert__specialization, .expert__practice{
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .expert_info-interests{
+    padding-top: 15px;
+    padding-left: 0;
+  }
+  
+  .interests-title{
+    font-size: 16px;
+  }
+  
+  .interests-text{
+    font-size: 14px;
+    text-align: justify;
+    padding-top: 10px;
+    line-height: 18px;
+  }
+
+  .expert__info-main.mobile{
+    display: block;
+    border: none;
+  }
+
+  .expert__info-main.big{
+    display: none;
+  }
+}

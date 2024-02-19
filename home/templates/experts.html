@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<title>Эксперты</title>
+<link rel="stylesheet" crossorigin href="{% static 'css/experts.css' %}">
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <section id="experts" class="experts">
+    <div class="filter">
+      <select name="select" class='filter__select'>
+        <option value="all">Выбрать специализацию</option>
+        <option value="value1">Значение 1</option>
+        <option value="value2">Значение 2</option>
+        <option value="value3">Значение 3</option>
+        <option value="value4">Значение 4</option>
+        <option value="value5">Значение 5</option>
+        <option value="value6">Значение 6</option>
+      </select>
+    </div>
+    <ul class="experts__list">
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo1.jpg' %}" alt="photo" class="expert__photo-img" />
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo2.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo3.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo4.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo5.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo6.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo7.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo8.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="experts__item">
+        <div class="content">
+          <div class="expert__photo">
+            <img src="{% static 'img/photo.jpg' %}" alt="photo" class="expert__photo-img"/>
+            <div class="expert__info-main mobile">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+          </div>
+          <div class="expert__info">
+            <div class="expert__info-main big">
+              <div class="expert__name">Майкл Эванс</div>
+              <div class="expert__specialization">Специализация:</div>
+              <div class="expert__practice">Практика: 4 года </div>
+            </div>
+            <div class="expert_info-interests">
+              <div class="interests-title">Сфера интересов</div>
+              <div class="interests-text">В детстве он увлекался музыкальным театром и посещал актерский лагерь. Будучи школьником, сыграл Рэндольфа Маккафи в мюзикле «Прощай, птичка». Он и его братья и сестры также выступали перед родственниками на Рождество. Перед началом выпускного класса средней школы Эванс провел лето в Нью-Йорке и посещал занятия в Институте театра и кино Ли Страсберга. Он рано окончил региональную среднюю школу Линкольн-Садбери.</div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+{% endblock %}

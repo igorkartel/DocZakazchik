@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/x-icon" href="{% static 'img/favicon.ico' %}" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="{% static 'css/null_for_templates.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_footer.css' %}">
+    <script type="module" crossorigin src="{% static 'js/header.js' %}"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="wrapper">
+    <div id="popup" class="popup"></div>
+    <header class="header">
+      <div class="container" id="header">
+        <div class="header__inner">
+          <div class='header__burger'>
+            <svg class="header__burger__img" width="25" height="25" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 14.875C3.5 14.6429 3.59219 14.4204 3.75628 14.2563C3.92038 14.0922 4.14294 14 4.375 14H24.164C24.3961 14 24.6186 14.0922 24.7827 14.2563C24.9468 14.4204 25.039 14.6429 25.039 14.875C25.039 15.1071 24.9468 15.3296 24.7827 15.4937C24.6186 15.6578 24.3961 15.75 24.164 15.75H4.375C4.14294 15.75 3.92038 15.6578 3.75628 15.4937C3.59219 15.3296 3.5 15.1071 3.5 14.875ZM3.5 7.875C3.5 7.64294 3.59219 7.42038 3.75628 7.25628C3.92038 7.09219 4.14294 7 4.375 7H30.625C30.8571 7 31.0796 7.09219 31.2437 7.25628C31.4078 7.42038 31.5 7.64294 31.5 7.875C31.5 8.10706 31.4078 8.32962 31.2437 8.49372C31.0796 8.65781 30.8571 8.75 30.625 8.75H4.375C4.14294 8.75 3.92038 8.65781 3.75628 8.49372C3.59219 8.32962 3.5 8.10706 3.5 7.875ZM3.5 21.875C3.5 21.6429 3.59219 21.4204 3.75628 21.2563C3.92038 21.0922 4.14294 21 4.375 21H30.625C30.8571 21 31.0796 21.0922 31.2437 21.2563C31.4078 21.4204 31.5 21.6429 31.5 21.875C31.5 22.1071 31.4078 22.3296 31.2437 22.4937C31.0796 22.6578 30.8571 22.75 30.625 22.75H4.375C4.14294 22.75 3.92038 22.6578 3.75628 22.4937C3.59219 22.3296 3.5 22.1071 3.5 21.875ZM3.5 28.875C3.5 28.6429 3.59219 28.4204 3.75628 28.2563C3.92038 28.0922 4.14294 28 4.375 28H24.164C24.3961 28 24.6186 28.0922 24.7827 28.2563C24.9468 28.4204 25.039 28.6429 25.039 28.875C25.039 29.1071 24.9468 29.3296 24.7827 29.4937C24.6186 29.6578 24.3961 29.75 24.164 29.75H4.375C4.14294 29.75 3.92038 29.6578 3.75628 29.4937C3.59219 29.3296 3.5 29.1071 3.5 28.875Z" fill="black"/>
+            </svg>
+          </div>
+          <a href="" class="logo">
+            <img src="{% static 'img/logo.jpg'%}" alt="" class="logo__img"></img>
+          </a>
+          <nav class='menu'>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a href="/" class="menu__list-link">Главная</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="" class="menu__list-link">Документация</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="" class="menu__list-link">Новости</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="" class="menu__list-link">Блог</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="" class="menu__list-link">Библиотека</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="" class="menu__list-link">Контакты</a>
+              </li>
+              <li class="menu__list-item menu__list-item_footer">
+                <ul class="menu__list__footer">
+                  {% for contact_icon in contacts_icons %}
+                  {% if contact_icon.contact_icon %}
+                  {{''}}
+                  {% else %}
+                  <li key={{contact_icon.contact_title}} class="menu__list__footer-item">
+                    <a href={{contact_icon.contact_link}} class="menu__list__footer-link_svg">{{contact_icon.contact_title}}</a>
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+                  <li class="menu__list__footer-item support">
+                    <div class="menu__list__footer-links">
+                      {% for contact_icon in contacts_icons %}
+                      {% if contact_icon.contact_icon_adaptive %}
+                      <a key={{contact_icon.contact_title}} href={{contact_icon.contact_link}} class="menu__list__footer-link_svg">
+                        <img class="menu__list__footer-link_jpg" src="/media/{{contact_icon.contact_icon_adaptive}}" alt=""></img>
+                      </a>
+                      {% endif %}
+                      {% endfor %}
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__button" id="header-button"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      {% block main %}{% endblock %}
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__container">
+          <nav class="footer__menu">
+            <a href="" class="logo">
+              <img src="/static/img/logo.jpg" alt="" class="logo__img"></img>
+            </a>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="" class="footer__menu-link">Главная</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="" class="footer__menu-link">Документация</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="" class="footer__menu-link">Новости</a>
+              </li>
+              <li class="footer__menu-item small__library">
+                <a href="" class="footer__menu-link">Библиотека</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="" class="footer__menu-link">Блог</a>
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="" class="footer__menu-link">Хотите поддержать проект?</a>
+              </li>
+              <li class="footer__menu-item big__library">
+                <a href="" class="footer__menu-link">Библиотека</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="" class="footer__menu-link">Контакты</a>
+              </li>
+              {% for contact_icon in contacts_icons %}
+              {% if contact_icon.contact_icon %}
+              {{''}}
+              {% else %}
+              <li key={{contact_icon.contact_title}} class="footer__menu-item support">
+                <a href={{contact_icon.contact_link}} class="footer__menu-link">{{contact_icon.contact_title}}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+              <li class="footer__menu-item support">
+                <div class="footer__menu-links">
+                  {% for contact_icon in contacts_icons %}
+                  {% if contact_icon.contact_icon %}
+                  <a key={{contact_icon.contact_title}} href={{contact_icon.contact_link}} class="footer__menu-link_svg">
+                    <img class="footer__menu-link_jpg" src="/media/{{contact_icon.contact_icon}}" alt=""></img>
+                  </a>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </li>
+            </ul>
+            <ul class="footer__menu-list support">
+              {% for contact_icon in contacts_icons %}
+              {% if contact_icon.contact_icon %}
+              {{''}}
+              {% else %}
+              <li key={{contact_icon.contact_title}} class="footer__menu-item">
+                <a href={{contact_icon.contact_link}} class="footer__menu-link_svg">{{contact_icon.contact_title}}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+              <li class="footer__menu-item">
+                <div class="footer__menu-links">
+                  {% for contact_icon in contacts_icons %}
+                  {% if contact_icon.contact_icon %}
+                  <a key={{contact_icon.contact_title}} href={{contact_icon.contact_link}} class="footer__menu-link_svg">
+                    <img class="footer__menu-link_jpg" src="/media/{{contact_icon.contact_icon}}" alt=""></img>
+                  </a>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <hr class="footer__line"></hr>
+        <div class="footer__container">
+            <div class="footer__copy">
+                <p class="footer__copy_item">{{copyright.site_name}}</p>
+                <p class="footer__copy_item">{{copyright.owner_name}}, УНП: {{copyright.unp}}</p>
+                <p class="footer__copy_item">Юр. адрес: {{copyright.postcode}}, {{copyright.country}}, {{copyright.city}}, {{copyright.street}} {{copyright.house}}</p>
+            </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    function getRecaptcha () {
+      recaptcha_response = grecaptcha.getResponse();
+      localStorage.setItem('captcha', recaptcha_response);
+    }
+  </script>
+</body>

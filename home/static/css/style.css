@@ -1,0 +1,454 @@
+@font-face {
+    font-family: "Manrope Regular";
+    src: url(/static/font/Manrope/static/Manrope-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Myra 4f Caps Light";
+    src: url(/static/font/Myra4FCaps/myra4fcaps_light.ttf);
+    font-weight: 300;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    background: rgba(216, 228, 214, 0.3);
+}
+
+.header__inner {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__list {
+    display: flex;
+    gap: 20px;
+}
+
+.menu__list-link, .header_log-in {
+    font-family: "Manrope Regular";
+}
+
+.header__button {
+    position: relative;
+}
+
+.button__log-in.active {
+    height: auto;
+    width: auto;
+    overflow: auto;
+    opacity: 1;
+}
+
+.button__log-in {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 15px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.button__inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header_log-in {
+    font-size: 16px;
+}
+
+.header__user, .header__logout {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.header__user.active {
+    height: 50px;
+    width: 50px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-family: "Manrope Regular";
+    font-size: larger;
+    font-weight: 700;
+    overflow: auto;
+    opacity: 1;
+    border: 1px solid rgba(144, 238, 144, 0.658);
+}
+
+.header__logout.active {
+    position: absolute;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    top: 60px;
+    right: 0;
+    overflow: auto;
+    opacity: 1;
+    height: auto;
+    width: auto;
+}
+
+.header__logout__btn {
+    background: rgba(144, 238, 144, 0.425);
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    padding: 25px 0 20px;
+    background: rgba(216, 228, 214, 0.3);
+}
+
+.footer__container {
+    max-width: 854px;
+    margin: 0 auto;
+}
+
+.footer__menu {
+    padding-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__copy {
+    text-align: center;
+}
+
+.footer__copy_item{
+    margin-bottom: 5px;
+    font-family: "Manrope Regular";
+}
+
+.footer__menu-item {
+    margin-bottom: 10px;
+}
+
+.footer__menu-link {
+    font-family: "Manrope Regular";
+}
+
+.footer__menu-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__line {
+    border: 1px solid rgba(217, 217, 217, 1);
+    margin-bottom: 16px;
+}
+
+.main {
+    padding-bottom: 75px;
+}
+
+.documentation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+}
+
+.documentation__main {
+    max-width: 488px;
+    padding-top: 71px;
+}
+
+.documentation__title {
+    font-family: "Myra 4f Caps Light";
+    font-size: 55px;
+    line-height: 80px;
+}
+
+.documentation__about {
+    padding-top: 10px;
+    font-family: "Manrope Regular";
+    line-height: 22.4px;
+}
+
+.documentation__video {
+    border-radius: 10px;
+    background: black;
+}
+
+.actuality {
+    padding-top: 50px;
+}
+
+.main__title {
+    font-family: "Manrope Regular";
+    font-size: 40px;
+}
+
+.actuality__paragraphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.actuality__paragraph.dg {
+    max-width: 630px;
+    padding: 30px 37px;
+    margin-bottom: 20px;
+    font-family: "Manrope Regular";
+    line-height: 22.4px;
+    border-radius: 10px;
+    background-color: rgba(126, 168, 122, 0.5);
+}
+
+.actuality__paragraph.lg {
+    max-width: 630px;
+    padding: 30px 37px;
+    margin-bottom: 20px;
+    font-family: "Manrope Regular";
+    line-height: 22.4px;
+    border-radius: 10px;
+    background: rgba(126, 168, 122, 0.2);
+}
+
+.statistics {
+    padding-top: 60px;
+}
+
+.statistics__graphics {
+    padding-top: 31px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.board {
+    padding-top: 76px;
+}
+
+.board__cards {
+    padding-top: 30px;
+}
+
+.board__cards_container {
+    height: 1155.410px;
+    overflow-y: hidden;
+}
+
+.board__cards_container.full {
+    height: max-content;
+}
+
+.board__card {
+    border: 1px solid rgba(121, 121, 121, 1);
+    border-radius: 10px;
+    width: max-content;
+    margin-bottom: 70px;
+}
+
+.board__card__info {
+    padding: 5px 0 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.board__card__name, .board__card__position {
+    text-align: center;
+    font-family: "Manrope Regular";
+}
+
+.board__card__name {
+    font-size: 20px;
+    line-height: 27.32px;
+}
+
+.board__card__position {
+    line-height: 22.4px;
+}
+
+.board_img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.board__cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.cards__button_m.active, .cards__button_h.hide {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    opacity: 1;
+}
+
+.cards__button_h, .cards__button_m {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.cards__button_more, .cards__button_hide {
+    padding: 15px 137px;
+    font-family: "Manrope Regular";
+    border: 1px solid rgba(121, 121, 121, 1);
+    border-radius: 10px;
+    background: rgb(128,168,124);
+    background: linear-gradient(180deg, rgba(128,168,124,1) 0%, rgba(98,140,94,1) 67%);
+}
+
+.popup {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.popup.active{
+    position: absolute;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.685);
+}
+
+.popup__container {
+    position: relative;
+    display: flex;
+    width: 603px;
+    padding: 70px 80px;
+    background: white;
+}
+
+.popup__log-in.active, .popup__register.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    opacity: 1;
+}
+
+.popup__log-in, .popup__register {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.popup__input {
+    padding: 15px;
+    font-family: "Manrope Regular";
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.popup__input_green {
+    padding: 15px;
+    font-family: "Manrope Regular";
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(128,168,124);
+    background: linear-gradient(180deg, rgba(128,168,124,1) 0%, rgba(98,140,94,1) 67%);
+}
+
+.login-using, .no-account-yet {
+    font-family: "Manrope Regular";
+    padding-top: 30px;
+    text-align: center;
+}
+
+.popup__button {
+    padding: 15px;
+    font-family: "Manrope Regular";
+    border-radius: 5px;
+    margin-top: 30px;
+    background: rgba(231, 231, 231, 1);
+    cursor: pointer;
+}
+
+.popup_links {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.popup_link {
+    padding: 5px 30px;
+    border: 1px solid black;
+    border-radius: 5px
+}
+
+.popup__check {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 25px;
+    font-family: "Manrope Regular";
+    font-size: 12px;
+}
+
+.popup__check_text {
+    padding-left: 10px;
+}
+
+.popup__check_text a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.error {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    height: 0;
+    width: 0;
+    background-color: brown;
+    color: azure;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.error.active {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    height: 30px;
+    width: 443px;
+    background-color: brown;
+    color: azure;
+    overflow: auto;
+    opacity: 1;
+    text-align: center;
+    padding-top: 5px;
+}
